@@ -6,7 +6,7 @@ public class FollowPlayer : MonoBehaviour
 
 {
     public GameObject Player;// Created component to add Player to script.
-    public Vector3 thirdPersonOffset = new Vector3(0, 8, -10);
+    public Vector3 thirdPersonOffset = new Vector3(0, 8, -10); //
     public Vector3 firstPersonOffset;
     private Vector3 currentOffset;
     private bool isfirstPerson = false;
