@@ -20,8 +20,14 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (isfirstPerson) currentOffset = Player.transform.position + firstPersonOffset;
-        else currentOffset = Player.transform.position + thirdPersonOffset;
+        if (isfirstPerson)
+        {
+            currentOffset = Player.transform.position + firstPersonOffset;
+        }
+        else
+        {
+            currentOffset = Player.transform.position + thirdPersonOffset;
+        }
 
         if (Input.GetMouseButtonDown(0))
         {
