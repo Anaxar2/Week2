@@ -6,10 +6,11 @@ using UnityEngine.Jobs;
 
 public class PlayerController : MonoBehaviour
 {
-  public float speed = 5.0f; // Created component named speed with a value of 5.
-    public float turnSpeed;
-    public float horizontalInput;
-    public float verticalInput;
+    public float speed = 5.0f; // Created component named speed with a value of 5.
+    public float turnSpeed = 1f;
+    float horizontalInput;
+    float forwardInput;
+
     
     // Start is called before the first frame update
     void Start()
@@ -23,12 +24,10 @@ public class PlayerController : MonoBehaviour
 
        
         horizontalInput = Input.GetAxis("Horizontal");
-       
-
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);  // Moves the vechicle forward
-        transform.Translate(Vector3.right * Time.deltaTime * turnSpeed * horizontalInput);
-
-        //transform.Translate(Input.GetAxis("Horizontal"), 0, 0); //Move left and Right
+        forwardInput = Input.GetAxis("Vertical");
+      
+        transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);  // Moves the vechicle forward based on vertical input.
+        transform.Rotate(Vector3.up, turnSpeed * horizontalInput); // Rotates player based on horizontal input (left and right).
 
 
 

@@ -1145,7 +1145,7 @@ MonoBehaviour:
   speed: 8
   turnSpeed: 0
   horizontalInput: 0
-  verticalInput: 0
+  forwardInput: 0
 --- !u!54 &407837092
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4394,7 +4394,7 @@ MonoBehaviour:
   speed: 8
   turnSpeed: 0
   horizontalInput: 0
-  verticalInput: 0
+  forwardInput: 0
 --- !u!1001 &1561015832
 PrefabInstance:
   m_ObjectHideFlags: 0
